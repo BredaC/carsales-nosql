@@ -1,11 +1,14 @@
 import { Component, Input } from '@angular/core';
 
+
+import {CommonModule} from '@angular/common';
 import { CarApiService } from '../../services/car-api.service';
 import { ICar } from '../../interfaces/car';
 
+
 @Component({
   selector: 'app-car',
-  imports: [],
+  imports: [ CommonModule],
   templateUrl: './car.component.html',
   styleUrl: './car.component.css'
 })
