@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { CarApiService } from '../../services/car-api.service';
+import { ICar } from '../../interfaces/car';
 
 @Component({
   selector: 'app-car',
@@ -7,5 +10,17 @@ import { Component } from '@angular/core';
   styleUrl: './car.component.css'
 })
 export class CarComponent {
+
+  @Input() carData?: ICar;
+
+  carImageWidth: number = 300;
+
+  constructor(private _carAPIService: CarApiService) { }
+
+  deleteCar(carId: string) {
+    this._carAPIService.delCarDetails(carId).subscribe(result => {
+      console.log(result);
+    });
+  }
 
 }
