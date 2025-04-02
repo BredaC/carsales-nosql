@@ -6,7 +6,7 @@ import { CarApiService } from './services/car-api.service';
 import { CarlistComponent } from './components/carlist/carlist.component';
 
 import { ICar } from './interfaces/car';
-import { NewCar } from './interfaces/car';
+
 
 @Component({
   selector: 'app-root',
@@ -20,6 +20,6 @@ export class AppComponent {
 
 
   constructor(private _carAPIService: CarApiService) { }
-
+ 
 
 }

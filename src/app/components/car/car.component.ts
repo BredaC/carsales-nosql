@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 import {CommonModule} from '@angular/common';
@@ -16,6 +16,8 @@ export class CarComponent {
 
   @Input() carData?: ICar;
 
+  @Output() carDeletedEvent = new EventEmitter<string>();
+
   carImageWidth: number = 300;
 
   constructor(private _carAPIService: CarApiService) { }
@@ -24,6 +26,8 @@ export class CarComponent {
     this._carAPIService.delCarDetails(carId).subscribe(result => {
       console.log(result);
     });
+
+    this.carDeletedEvent.emit("Car got deleted");
   }
 
 }
