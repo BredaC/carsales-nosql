@@ -20,6 +20,14 @@ export class AppComponent {
 
 
   constructor(private _carAPIService: CarApiService) { }
- 
+  ngOnInit() {
+    this.getCars()
+  }
+
+  getCars() {
+    this._carAPIService.getCarDetails().subscribe(carsData =>
+      { this.carsData = carsData
+    });
+  }
 
 }

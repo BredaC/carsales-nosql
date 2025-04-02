@@ -10,7 +10,7 @@ import { ICar } from '../interfaces/car'
 })
 export class CarApiService {
 
-  private _siteURL = "https://localhost:5050/cars/"
+  private _siteURL = "http://localhost:5050/cars/"
 
   constructor(private _http: HttpClient) { }
 
