@@ -11,7 +11,7 @@ import { RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, CarlistComponent, RouterLink, RouterLinkActive ],
+  imports: [RouterOutlet, CommonModule, RouterLink, RouterLinkActive ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
