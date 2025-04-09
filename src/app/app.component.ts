@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 import {CommonModule} from '@angular/common';
 import { CarApiService } from './services/car-api.service';
-import { CarlistComponent } from './components/carlist/carlist.component';
+
 
 import { ICar } from './interfaces/car';
 import { RouterLink} from '@angular/router';
@@ -11,7 +11,7 @@ import { RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, RouterLink, RouterLinkActive ],
+  imports: [RouterOutlet, CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
