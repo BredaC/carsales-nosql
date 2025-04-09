@@ -24,10 +24,11 @@ export class CarComponent {
 
   deleteCar(carId: string) {
     this._carAPIService.delCarDetails(carId).subscribe(result => {
+      this.carDeletedEvent.emit("Car got deleted");
       console.log(result);
     });
 
-    this.carDeletedEvent.emit("Car got deleted");
+    
   }
 
 }
